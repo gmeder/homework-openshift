@@ -1,0 +1,22 @@
+swagger-codegen generate \
+  -i https://raw.githubusercontent.com/gmeder/freelancer-service/master/src/main/resources/swagger.yaml \
+  --api-package com.redhat.homework.freelancerservice.client.api \
+  --model-package com.redhat.homework.freelancerservice.client.model \
+  --invoker-package com.redhat.homework.freelancerservice.client.invoker \
+  --group-id com.redhat \
+  --artifact-id freelancer-api-client \
+  --artifact-version 1.0.0 \
+  -l java \
+  -o freelancer-api-client
+
+
+swagger-codegen generate \
+  -i https://raw.githubusercontent.com/gmeder/project-service/master/src/main/resources/swagger.yaml \
+  --api-package com.redhat.homework.projectservice.client.api \
+  --model-package com.redhat.homework.projectservice.client.model \
+  --invoker-package com.redhat.homework.projectservice.client.invoker \
+  --group-id com.redhat \
+  --artifact-id project-api-client \
+  --artifact-version 1.0.0 \
+  -l java \
+  -o project-api-client

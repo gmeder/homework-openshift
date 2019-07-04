@@ -1,7 +1,14 @@
 #/bin/bash
 
+LOCAL=$1
+
 rm -rf gateway-service
 rm -rf project-service
 rm -rf freelancer-service
+rm -rf freelancer-api-client
+rm -rf project-api-client
 
-oc delete project homework
+if [ -n "$LOCAL" ] && [ "$LOCAL" == "--oc" ]
+then
+   oc delete project homework
+fi
