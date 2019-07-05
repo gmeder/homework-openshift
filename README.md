@@ -1,14 +1,14 @@
 # Deploy all project on Openshif
 
-Log to Openshift
+## Log in with openshift CLI
 
 	$ oc login -u ... -p ....
 
-Create project homework
+## Create the homework project
 
 	$ oc new-project homework
 
-Deploy all projects
+## Deploy the services
 
 	$ ./deployProjectsOpenshift.sh
 
