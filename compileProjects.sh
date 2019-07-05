@@ -31,7 +31,7 @@ mvn clean package -DskipTests
 echo -e "Done\n"
 
 
-echo "Compiling freelancer...\n"
+echo -e "Compiling freelancer...\n"
 
 cd $ROOT_FOLDER/freelancer-service
 mvn clean package -DskipTests
