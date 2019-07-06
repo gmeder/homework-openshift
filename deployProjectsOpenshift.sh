@@ -36,7 +36,7 @@ echo -e "Done\n"
 
 echo "Deploying freelancer...\n"
 
-cd $ROOT_FOLDER\freelancer-service
+cd $ROOT_FOLDER/freelancer-service
 oc new-app --name freelancer-db-service \
 -e POSTGRES_USER=postgres \
 -e POSTGRES_PASSWORD=postgres \
