@@ -1,8 +1,11 @@
 #!/bin/bash
 
 
-ROOT_FOLDER=$(pwd)
+ROOT_FOLDER=/tmp/assignment-install/
 OC_PROJECT=assignment-gmeder
+
+mkdir -p $ROOT_FOLDER
+cd $ROOT_FOLDER
 
 # Gateway Service
 echo -e "Cloning projects...\n"
@@ -64,3 +67,6 @@ oc create configmap project-service --from-file=etc/app-config.yml
 mvn clean fabric8:deploy -Popenshift -DskipTests
 
 echo -e "Done\n"
+
+
+rm -rf $ROOT_FOLDER
