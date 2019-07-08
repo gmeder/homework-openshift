@@ -15,6 +15,13 @@ The 3 mains projects (freelancer, projects, gateway) has documentation (DOC.md) 
 
 The complete solution is already deployed in *https://master.na311.openshift.opentlc.com* in project *assignment-gmeder* and could be tested following the steps in https://github.com/gmeder/gateway-service
 
+In order to compile, execute and deploy you need to have installed in your environment and configured in PATH:
+
+- mvn 3.5
+- docker
+- openshift-cli
+- git
+
 If you want to deploy using your own cluster, run the following commands:
 
 ## Log in with openshift CLI
