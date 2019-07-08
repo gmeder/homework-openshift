@@ -34,7 +34,7 @@ mvn clean fabric8:deploy -Popenshift -DskipTests
 echo -e "Done\n"
 
 
-echo "Deploying freelancer...\n"
+echo -e "Deploying freelancer...\n"
 
 cd $ROOT_FOLDER/freelancer-service
 oc new-app --name freelancer-db-service \
@@ -50,8 +50,6 @@ echo -e "Done\n"
 
 
 echo -e "Deploying projects...\n"
-
-oc policy add-role-to-user view -z default
 
 cd $ROOT_FOLDER/project-service
 oc new-app --name mongodb-project-service \
