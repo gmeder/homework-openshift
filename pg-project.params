@@ -1,0 +1,4 @@
+POSTGRESQL_USER=postgres
+POSTGRESQL_PASSWORD=postgres
+POSTGRESQL_DATABASE=freelancerdb
+DATABASE_SERVICE_NAME=freelancer-db-service

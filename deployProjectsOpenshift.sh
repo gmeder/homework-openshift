@@ -2,6 +2,7 @@
 
 
 ROOT_FOLDER=$(pwd)
+OC_PROJECT=assignment-gmeder
 
 # Gateway Service
 echo -e "Cloning projects...\n"
@@ -25,7 +26,7 @@ echo -e "Done\n"
 
 echo -e "Deploying gateway....\n"
 
-oc project homework
+oc project $OC_PROJECT
 
 cd $ROOT_FOLDER/gateway-service
 oc create configmap gateway-service --from-file=etc/project-defaults.yml
@@ -37,12 +38,13 @@ echo -e "Done\n"
 echo -e "Deploying freelancer...\n"
 
 cd $ROOT_FOLDER/freelancer-service
-oc new-app --name freelancer-db-service \
--e POSTGRES_USER=postgres \
--e POSTGRES_PASSWORD=postgres \
--e POSTGRES_DB=freelancerdb \
-https://github.com/gmeder/postgres-freelancer.git \
---strategy=docker
+
+oc new-app --name=freelancer-db-service \
+-e POSTGRESQL_USER=freelancer \
+-e POSTGRESQL_PASSWORD=freelancer \
+-e POSTGRESQL_DATABASE=freelancerdb \
+centos/postgresql-96-centos7
+
 oc create configmap freelancer-service --from-file=etc/application.properties
 mvn clean fabric8:deploy -Popenshift -DskipTests
 
