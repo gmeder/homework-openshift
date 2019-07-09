@@ -1,4 +1,4 @@
-# Assigment Project
+# Assignment Project
 
 Every project in the solution has its own repository. Every repository has a README with instructions to test locally with docker o tu run it on the Shared Openshift Cluster from OpenTLC (3.11)
 
