@@ -1,6 +1,6 @@
 # Assigment Project
 
-Every project in the solution has its own repository. Every repository has a README with instructions to test locally with docker o tu run it on the Shared Openshift Cluster from Opentlc (3.11)
+Every project in the solution has its own repository. Every repository has a README with instructions to test locally with docker o tu run it on the Shared Openshift Cluster from OpenTLC (3.11)
 
 The projects are:
 
@@ -22,7 +22,7 @@ In order to compile, execute and deploy you need to have installed in your envir
 - openshift-cli
 - git
 
-If you want to deploy using your own cluster, run the following commands:
+If you want to deploy using your own cluster, you'll have to update the route in *src/main/fabric8/route.yml* to fit your environment in the gateway, freelancer and projects service source code and then run the following commands:
 
 ## Log in with openshift CLI
 
